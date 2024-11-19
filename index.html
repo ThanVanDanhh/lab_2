@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-section">
+            <header>Đăng ký</header>
+            <div class="social-buttons">
+                <button><i class='bx bxl-google'></i> Google</button>
+                <button><i class='bx bxl-apple'></i> Apple</button>
+            </div>
+            <div class="separator">
+                <div class="line"></div>
+                <p>Hoặc</p>
+                <div class="line"></div>
+            </div>
+            <form>
+                <input type="text" placeholder="Full name" required>
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Quên mật khẩu?</a>
+                <button type="submit" class="btn">Đăng ký</button>
+            </form>
+        </div>
+        <div class="login-section">
+            <header>Đăng nhập</header>
+            <div class="social-buttons">
+                <button><i class='bx bxl-google'></i> Google</button>
+                <button><i class='bx bxl-apple'></i> Apple</button>
+            </div>
+            <div class="separator">
+                <div class="line"></div>
+                <p>Hoặc</p>
+                <div class="line"></div>
+            </div>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Quên mật khẩu?</a>
+                <button type="submit" class="btn">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+<script>
+const container = document.querySelector('.container');
+const signupButton = document.querySelector('.signup-section header');
+const loginButton = document.querySelector('.login-section header');
+loginButton.addEventListener('click', () => {
+    container.classList.add('active');
+});
+signupButton.addEventListener('click', () => {
+    container.classList.remove('active');
+});
+</script>
+</body>
+</html>
